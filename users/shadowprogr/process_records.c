@@ -7,9 +7,11 @@ __attribute__((weak)) bool process_record_keymap(uint16_t keycode, keyrecord_t *
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     static my_lt_data_t lwr_data;
     static my_lt_data_t rse_data;
+    static my_lt_data_t lctl_data;
 
-    process_my_lt(keycode, record, LT_LWR, _LOWER, KC_ENT, &lwr_data);
-    process_my_lt(keycode, record, LT_RSE, _RAISE, KC_DEL, &rse_data);
+    process_my_lt(keycode, record, LT_LWR, _LOWER, KC_ENT, &lwr_data, 0);
+    process_my_lt(keycode, record, LT_RSE, _RAISE, KC_DEL, &rse_data, 0);
+    process_my_lt(keycode, record, MT_LCTL, _QWERTY_OVERLAY, KC_ESC, &lctl_data, MOD_LCTL);
 
     switch (keycode) {
         /* Macros */

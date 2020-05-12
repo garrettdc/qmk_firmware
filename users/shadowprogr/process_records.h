@@ -11,5 +11,6 @@ enum userspace_custom_keycodes {
   /* Macros */
   KC_P00,
   LT_LWR,
-  LT_RSE
+  LT_RSE,
+  MT_LCTL
 };

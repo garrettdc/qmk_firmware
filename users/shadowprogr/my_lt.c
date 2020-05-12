@@ -1,7 +1,7 @@
 /* Shamelessly copied @sigprof code */
 #include "shadowprogr.h"
 
-void process_my_lt(uint16_t keycode, keyrecord_t *record, uint16_t lt_kc, uint8_t layer, uint16_t tap_kc, my_lt_data_t *data) {
+void process_my_lt(uint16_t keycode, keyrecord_t *record, uint16_t lt_kc, uint8_t layer, uint16_t tap_kc, my_lt_data_t *data, uint8_t mods) {
     if (keycode == lt_kc) {
         // The event is for the layer tap key.
 
